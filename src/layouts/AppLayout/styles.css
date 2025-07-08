@@ -1,0 +1,20 @@
+.app-layout nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.app-layout nav a {
+  text-decoration: none;
+  color: #45556c;
+}
+
+.app-layout nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.app-layout main {
+  display: flex;
+  flex-direction: column;
+}

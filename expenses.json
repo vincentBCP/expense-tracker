@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Internet",
+    "category": "miscellaneous",
+    "amount": 1500,
+    "date": "2025-07-08"
+  },
+  {
+    "id": 2,
+    "name": "Meralco",
+    "category": "utilities",
+    "amount": 2500,
+    "date": "2025-07-08"
+  },
+  {
+    "id": 3,
+    "name": "Maynilad",
+    "category": "utilities",
+    "amount": 200,
+    "date": "2025-07-08"
+  }
+]

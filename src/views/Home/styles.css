@@ -1,0 +1,103 @@
+.add-btn {
+  align-self: flex-end;
+  margin-bottom: 32px;
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #51a2ff;
+  color: white;
+  text-decoration: none;
+}
+
+.add-btn:hover {
+  background-color: #2b7fff;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.expense:nth-child(odd) {
+  background-color: #f9fafb;
+}
+
+.expense span:nth-of-type(1) {
+  margin-right: 8px;
+}
+
+.expense span:nth-of-type(2) {
+  font-size: 11px;
+  background-color: #e5e7eb;
+  padding: 2px 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.expense span:nth-of-type(3) {
+  margin-left: auto;
+}
+
+.expense .actions {
+  margin-left: 32px;
+  display: flex;
+  gap: 8px;
+}
+
+.expense .actions [class*="btn"] {
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.expense .actions .edit-btn {
+  outline: 1px solid #008236;
+  color: #008236;
+}
+
+.expense .actions .edit-btn:hover {
+  background-color: #dcfce7;
+}
+
+.expense .actions .edit-btn:active {
+  background-color: #b9f8cf;
+}
+
+.expense .actions .remove-btn {
+  outline: 1px solid #e7000b;
+  color: #e7000b;
+}
+
+.expense .actions .remove-btn:hover {
+  background-color: #ffe2e2;
+}
+
+.expense .actions .remove-btn:active {
+  background-color: #ffc9c9;
+}
+
+.expense-list .empty,
+.expense-list .loader {
+  text-align: center;
+  background-color: #f3f4f6;
+  padding: 16px 0;
+}
+
+.expense-list .total {
+  text-align: right;
+  margin-top: 32px;
+}
