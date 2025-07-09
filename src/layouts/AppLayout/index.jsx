@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink, Outlet } from "react-router";
 
 import "./styles.css";
 
@@ -12,12 +13,15 @@ class AppLayout extends React.Component {
       <div className="app-layout">
         <h1>{this.props.title || "Expense Tracker"}</h1>
         <nav className="navigation">
-          <a href="#" className="active">
-            Home
-          </a>
-          <a href="#">Reporting</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/reporting">Reporting</NavLink>
         </nav>
-        <main>{this.props.children}</main>
+        <main>
+          <Link to="/add-expense" className="add-btn">
+            &#10010; ADD
+          </Link>
+          <Outlet />
+        </main>
       </div>
     );
   }

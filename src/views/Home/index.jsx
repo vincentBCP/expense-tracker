@@ -5,6 +5,7 @@ import { formatMoney } from "../../utils";
 import "./styles.css";
 import ExpenseList from "../../components/ExpenseList";
 import ExpenseForm from "../../components/ExpenseForm";
+import { Link } from "react-router";
 
 class Home extends React.Component {
   constructor() {
@@ -48,27 +49,7 @@ class Home extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        {this.state.showForm ? (
-          <button
-            className="cancel-btn"
-            onClick={() => this.setState({ showForm: false })}
-          >
-            CANCEL
-          </button>
-        ) : (
-          <button className="add-btn" onClick={this.handleAdd.bind(this)}>
-            &#10010; ADD
-          </button>
-        )}
-        {this.state.showForm ? (
-          <ExpenseForm onClose={() => this.setState({ showForm: false })} />
-        ) : (
-          <ExpenseList />
-        )}
-      </>
-    );
+    return <ExpenseList />;
   }
 }
 

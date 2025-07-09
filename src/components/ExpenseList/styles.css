@@ -83,3 +83,7 @@
   text-align: right;
   margin-top: 32px;
 }
+
+.expense-list .date-header {
+  font-weight: bold;
+}

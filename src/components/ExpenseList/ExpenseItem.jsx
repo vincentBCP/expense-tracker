@@ -1,12 +1,22 @@
+import { useNavigate } from "react-router";
 import { formatMoney } from "../../utils/formatMoney";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 const ExpenseItem = ({ expense }) => {
+  const { deleteExpense } = useContext(AppContext);
+  const navigate = useNavigate();
+
   const handleEdit = () => {
-    alert(`Edit ${expense.name}`);
+    navigate(`/edit-expense/${expense.id}`);
   };
 
   const handleDelete = () => {
-    alert(`Delete ${expense.name}`);
+    const c = confirm("Are you sure you want to delete this expense?");
+
+    if (!c) return;
+
+    deleteExpense(expense);
   };
 
   return (

@@ -1,0 +1,6 @@
+.expense-layout > a {
+  display: block;
+  color: #45556c;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}

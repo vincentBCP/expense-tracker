@@ -1,20 +1,25 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { formatDate } from "../../utils";
 
 import "./styles.css";
 
-const ExpenseForm = ({ onClose }) => {
-  const { categories, addExpense } = useContext(AppContext);
+const ExpenseForm = ({ expense, onSubmit }) => {
+  const { categories } = useContext(AppContext);
 
   const [formData, setFormData] = useState({
     date: formatDate(new Date()),
   });
 
+  useEffect(() => {
+    if (expense) {
+      setFormData({ ...expense });
+    }
+  }, [expense]);
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    addExpense(formData);
-    onClose();
+    onSubmit(formData);
   };
 
   return (
@@ -79,7 +84,7 @@ const ExpenseForm = ({ onClose }) => {
         required
       />
 
-      <button type="submit">ADD EXPENSE</button>
+      <button type="submit">{expense ? "SUBMIT" : "ADD"} EXPENSE</button>
     </form>
   );
 };
