@@ -1,0 +1,35 @@
+.expense-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.expense-form select,
+.expense-form input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.expense-form select {
+  text-transform: capitalize;
+}
+
+.expense-form button {
+  float: right;
+  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 200px;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #51a2ff;
+  color: white;
+}
+
+.expense-form button:hover {
+  background-color: #2b7fff;
+}
+
+.expense-form button:active {
+  background-color: #8ec5ff;
+}

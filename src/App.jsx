@@ -1,11 +1,14 @@
+import AppProvider from "./context/AppContext";
 import AppLayout from "./layouts/AppLayout";
 import Home from "./views/Home";
 
 const App = () => {
   return (
-    <AppLayout title="Home">
-      <Home />
-    </AppLayout>
+    <AppProvider>
+      <AppLayout title="Home">
+        <Home />
+      </AppLayout>
+    </AppProvider>
   );
 };
 

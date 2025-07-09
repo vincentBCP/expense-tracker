@@ -16,3 +16,17 @@ button {
   margin: 0 auto;
   padding: 16px;
 }
+
+input,
+select {
+  outline: 1px solid #d1d5dc;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 200px;
+  font-size: 16px;
+}
+
+select {
+  text-transform: capitalize;
+  border-right: 12px solid transparent;
+}
